@@ -5,11 +5,15 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NeighbourhoodsComponent } from './neighbourhoods/neighbourhoods.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NeighbourhoodsComponent
+    NeighbourhoodsComponent,
+    RegistrationComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
