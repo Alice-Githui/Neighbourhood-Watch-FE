@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { NeighbourhoodsComponent } from './neighbourhoods/neighbourhoods.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { BusinessesComponent } from './businesses/businesses.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NeighbourhoodsComponent,
     RegistrationComponent,
-    NavbarComponent  ],
+    NavbarComponent,
+    BusinessesComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
