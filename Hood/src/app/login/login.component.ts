@@ -25,7 +25,10 @@ export class LoginComponent implements OnInit {
         console.log(response)
         alert(this.input.username + 'logged in successfully') 
       },
-      error => console.log('error', error)
+      error => {
+        console.log('error', error)
+        alert('Username or password is incorrect')
+      }             
     ) ;
   }
 
