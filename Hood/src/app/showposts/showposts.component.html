@@ -5,10 +5,16 @@
                 <h1>Posts</h1>
                 <ul>
                     <li *ngFor='let post of posts'>
-                        {{post.name}}
-                        {{post.description}}
-                        <app-postdetailcomponent [post]='post'></app-postdetailcomponent>
+                        <h5>Posted By: {{post.name}}</h5>
+                        <br>
+                        <p>Post Details:
+                            {{post.description}}
+                        </p>
+                        <small>Date Posted: {{post.date | date}}</small>
+                        <br>
+                        <!-- <app-postdetailcomponent [post]='post'></app-postdetailcomponent> -->
                     </li>
+                    <br>
                 </ul>
             </div>
         </div>
