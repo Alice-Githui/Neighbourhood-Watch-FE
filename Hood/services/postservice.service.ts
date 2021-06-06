@@ -5,18 +5,16 @@ import {Observable} from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CreateuserService {
+export class PostserviceService {
   userData: any;
 
   api_link:string='http://localhost:8000/';
-  constructor(private http:HttpClient) { }
 
-  registerUser(userData: any):Observable<any>{
-    return this.http.post(this.api_link + `register/`, userData)
+  constructor(private http: HttpClient) { }
+
+  createPost(userData: any):Observable<any>{
+    return this.http.post(this.api_link + `api/posts/`, userData)
   }
-
 }
-
-
 
 

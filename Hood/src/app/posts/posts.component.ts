@@ -1,21 +1,33 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
-import {Post} from 'classes/post'
+import { Component, OnInit } from '@angular/core';
+import {PostserviceService} from '../../../services/postservice.service';
+
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
+  newPost:any;
 
-  newPost =new Post('', '', new Date());
-  @Output() addPost=new EventEmitter<Post>();
 
-  submitPost(){
-    this.addPost.emit(this.newPost);
+  constructor(private postService:PostserviceService) { }
+
+  ngOnInit(): void { 
+    this.newPost={
+      name: '', 
+      description:'', 
+      date: Date()
+    }
   }
-  constructor() { }
 
-  ngOnInit(): void {
+  createPost(){
+    this.postService.createPost(this.newPost).subscribe(
+      response =>{
+        alert('New Post has been created') 
+      },
+      error => console.log('error', error)
+    ) ;
   }
+
 
 }

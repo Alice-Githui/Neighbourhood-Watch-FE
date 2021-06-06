@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h2 class="text-center">Send a Post to the Group</h2>
     <hr>
-    <form (ngSubmit)='submitPost()' #goalForm='ngForm'>
+    <form #goalForm='ngForm'>
         <div class="form-group">  
             <label for="name">Username</label>
             <input type="text" required class="form-control" id="name" [(ngModel)]="newPost.name" name="name" #name='ngModel' required>
@@ -23,6 +23,8 @@
                 <p>Date is required</p>
             </div>
         </div>
-        <button type="submit" class="btn btn-danger">Post</button>
+        <button type="submit" class="btn btn-danger" (click)=createPost()>Post</button>
     </form>
   </div>
+
+
