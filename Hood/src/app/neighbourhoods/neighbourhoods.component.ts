@@ -8,6 +8,7 @@ import {GethoodsService} from '../../../services/gethoods.service'
 })
 export class NeighbourhoodsComponent implements OnInit {
   hoods: any;
+
   constructor(private hoodsService:GethoodsService) { }
 
   ngOnInit(): void {
@@ -20,5 +21,13 @@ export class NeighbourhoodsComponent implements OnInit {
       console.log(this.hoods);
     })
   }  
+
+  hoodClicked=(hood: { id: any; }) =>{
+    console.log(hood.id)
+    this.hoodsService.getOneHood(hood.id).subscribe(hoods =>{
+      console.log(hoods)
+      // this.hoods=hoods;
+    })
+  }
 
 }

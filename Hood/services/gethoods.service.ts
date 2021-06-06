@@ -12,4 +12,8 @@ export class GethoodsService {
   getAllHoods(){
     return this.http.get(this.api_link + `api/neighbours/`)
   }
+
+  getOneHood(id: any){
+    return this.http.get(this.api_link + `api/neighbours/` + id + '/')
+  }
 }

@@ -2,13 +2,13 @@
     <h2 class="text-center">Register New User</h2>
     <hr>
     <label for="username">Enter Username:</label><br>
-    <input [(ngModel)] = "register.username"><br>
+    <input [(ngModel)] = "input.username"><br>
     <label for="email">Enter Email:</label><br>
-    <input [(ngModel)]="register.email"><br>
+    <input [(ngModel)]="input.email"><br>
     <label for="password">Enter Password:</label><br>
-    <input [(ngModel)]="register.password" type="password"><br>
+    <input [(ngModel)]="input.password" type="password"><br>
     <label for="confirmpassword">Confirm Password:</label><br>
-    <input [(ngModel)]="register.confirmpassword" type="password"><br>
+    <input [(ngModel)]="input.confirmpassword" type="password"><br>
 
     <button (click)=registerUser()>Register</button>
 </div>

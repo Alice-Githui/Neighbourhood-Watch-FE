@@ -2,7 +2,7 @@
 
 <ul>
     <li *ngFor='let hood of hoods'>
-        <p>{{hood.name}}</p>
+        <a (click) ="hoodClicked(hood)" routerLink="neighbourhoods">{{hood.name}}</a>
         <p>{{hood.location}}</p>
 
     </li>

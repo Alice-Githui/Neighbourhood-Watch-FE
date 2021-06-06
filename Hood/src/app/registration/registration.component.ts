@@ -7,13 +7,13 @@ import {CreateuserService} from '../../../services/createuser.service';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  register:any;
+  input:any;
 
 
   constructor(private createUserService:CreateuserService) { }
 
   ngOnInit(): void { 
-    this.register={
+    this.input={
       username: '', 
       email:'',
       password:'', 
@@ -22,9 +22,9 @@ export class RegistrationComponent implements OnInit {
   }
 
   registerUser(){
-    this.createUserService.registerUser(this.register).subscribe(
+    this.createUserService.registerUser(this.input).subscribe(
       response =>{
-        alert('User' + this.register.username + 'has been created') 
+        alert('User' + this.input.username + 'has been created') 
       },
       error => console.log('error', error)
     ) ;

@@ -14,6 +14,6 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   loginUser(userData: any):Observable<any>{
-    return this.http.post(this.api_link + `loginuser/`, userData)
+    return this.http.post(this.api_link + `authlogin/`, userData)
   }
 }
