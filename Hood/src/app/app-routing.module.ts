@@ -4,12 +4,14 @@ import { BusinessesComponent } from './businesses/businesses.component';
 import { NeighbourhoodsComponent } from './neighbourhoods/neighbourhoods.component';
 import {RegistrationComponent} from './registration/registration.component';
 import {LoginComponent} from './login/login.component';
+import {PostsComponent} from './posts/posts.component'
 
 const routes: Routes = [
   {path: 'neighbourhoods', component:NeighbourhoodsComponent},
   {path: 'registration', component:RegistrationComponent},
   {path:'businesses', component:BusinessesComponent},
   {path: 'login', component:LoginComponent},
+  {path: 'makepost', component:PostsComponent},
 ];
 
 @NgModule({
