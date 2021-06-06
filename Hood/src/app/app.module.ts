@@ -10,6 +10,8 @@ import { NeighbourhoodsComponent } from './neighbourhoods/neighbourhoods.compone
 import { RegistrationComponent } from './registration/registration.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BusinessesComponent } from './businesses/businesses.component';
+import { LoginComponent } from './login/login.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { BusinessesComponent } from './businesses/businesses.component';
     NeighbourhoodsComponent,
     RegistrationComponent,
     NavbarComponent,
-    BusinessesComponent  ],
+    BusinessesComponent,
+    LoginComponent,
+    PostsComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
