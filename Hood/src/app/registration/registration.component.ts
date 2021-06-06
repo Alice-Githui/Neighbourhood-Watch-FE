@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CreateuserService} from '../../../services/createuser.service'
+import {CreateuserService} from '../../../services/createuser.service';
 
 @Component({
   selector: 'app-registration',
@@ -7,19 +7,28 @@ import {CreateuserService} from '../../../services/createuser.service'
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  users:any;
+  register:any;
 
-  constructor(private createuserservice:CreateuserService) { }
+
+  constructor(private createUserService:CreateuserService) { }
 
   ngOnInit(): void { 
-    // this.Registration();
+    this.register={
+      username: '', 
+      email:'',
+      password:'', 
+      confirmpassword:''
+    }
   }
 
-  // Registration(){
-  //   this.createuserservice.getRegistration().subscribe(users =>{
-  //     this.users=users;
-  //     console.log(this.users);
-  //   })
-  // } 
+  registerUser(){
+    this.createUserService.registerUser(this.register).subscribe(
+      response =>{
+        alert('User' + this.register.username + 'has been created') 
+      },
+      error => console.log('error', error)
+    ) ;
+  }
+
 
 }

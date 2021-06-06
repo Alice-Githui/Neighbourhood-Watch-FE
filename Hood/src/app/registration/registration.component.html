@@ -1,21 +1,14 @@
 <div class="container-fluid">
     <h2 class="text-center">Register New User</h2>
     <hr>
-    <form>
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" required class="form-control" id="name">
-        </div>
-        <div class="form-group">
+    <label for="username">Enter Username:</label><br>
+    <input [(ngModel)] = "register.username"><br>
+    <label for="email">Enter Email:</label><br>
+    <input [(ngModel)]="register.email"><br>
+    <label for="password">Enter Password:</label><br>
+    <input [(ngModel)]="register.password" type="password"><br>
+    <label for="confirmpassword">Confirm Password:</label><br>
+    <input [(ngModel)]="register.confirmpassword" type="password"><br>
 
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" rows="4" required></textarea>
-
-        </div>
-        <div class="form-group">
-            <label for="complete">Completion</label>
-            <input type='date' id="complete" required>
-
-        </div>
-    </form>
+    <button (click)=registerUser()>Register</button>
 </div>
