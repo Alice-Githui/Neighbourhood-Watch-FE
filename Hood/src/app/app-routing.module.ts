@@ -5,6 +5,7 @@ import { NeighbourhoodsComponent } from './neighbourhoods/neighbourhoods.compone
 import {RegistrationComponent} from './registration/registration.component';
 import {LoginComponent} from './login/login.component';
 import {PostsComponent} from './posts/posts.component'
+import { ShowpostsComponent } from './showposts/showposts.component';
 
 const routes: Routes = [
   {path: 'neighbourhoods', component:NeighbourhoodsComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'businesses', component:BusinessesComponent},
   {path: 'login', component:LoginComponent},
   {path: 'makepost', component:PostsComponent},
+  {path: 'home', component:ShowpostsComponent},
 ];
 
 @NgModule({

@@ -12,6 +12,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BusinessesComponent } from './businesses/businesses.component';
 import { LoginComponent } from './login/login.component';
 import { PostsComponent } from './posts/posts.component';
+import { ShowpostsComponent } from './showposts/showposts.component';
+import { PostdetailcomponentComponent } from './postdetailcomponent/postdetailcomponent.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { PostsComponent } from './posts/posts.component';
     NavbarComponent,
     BusinessesComponent,
     LoginComponent,
-    PostsComponent  ],
+    PostsComponent,
+    ShowpostsComponent,
+    PostdetailcomponentComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
