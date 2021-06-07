@@ -1,9 +1,7 @@
 <div class="container-fluid hoods">
     <div id="choose-hood">
         <h6 *ngFor="let hood of hoods" id="each-hood">
-            <a (click)="hoodClicked(hood)">{{hood.name}}</a>
-            <!-- routerLink="/home" -->
-            <!-- <p >View Details</p> -->
+            <a (click)="hoodClicked(hood)" routerLink="/home">{{hood.name}}</a>
             <p>{{hood.location}}</p>
 
         </h6>
