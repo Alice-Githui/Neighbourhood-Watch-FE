@@ -15,7 +15,9 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'makepost', component:PostsComponent},
   {path: 'home', component:ShowpostsComponent},
-  {path: 'newhood', component:AddhoodsComponent}
+  {path: 'newhood', component:AddhoodsComponent},
+
+  {path: '', redirectTo:"/registration", pathMatch:"full"}
 ];
 
 @NgModule({

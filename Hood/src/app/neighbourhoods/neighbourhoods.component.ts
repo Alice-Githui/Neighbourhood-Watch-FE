@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {GethoodsService} from '../../../services/gethoods.service'
+import {GethoodsService} from '../../../services/gethoods.service';
+import {HttpClient} from '@angular/common/http';
+import {Neighbourhood} from '../interface/models/neighbourhood'
+
 
 @Component({
   selector: 'app-neighbourhoods',
@@ -7,11 +10,11 @@ import {GethoodsService} from '../../../services/gethoods.service'
   styleUrls: ['./neighbourhoods.component.css']
 })
 export class NeighbourhoodsComponent implements OnInit {
+  neighbourhood: Neighbourhood[] = [];
   hoods: any;
-  name: any;
-  location: any;
+  hood: any;
 
-  constructor(private hoodsService:GethoodsService) { }
+  constructor(private hoodsService:GethoodsService, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.AllHoods();
@@ -19,20 +22,24 @@ export class NeighbourhoodsComponent implements OnInit {
 
   AllHoods(){
     this.hoodsService.getAllHoods().subscribe(hoods =>{
-      this.hoods=hoods;
-      
-      console.log(this.hoods);
+      this.hoods=hoods;      
+      // console.log(this.hoods);
     })
   }  
 
-  hoodClicked=(hood: { id: any; }) =>{
-    this.hoodsService.getOneHood(hood.id).subscribe(hood =>{
-      // this.hoods=hoods;
-      // this.name= hoods.location;
-      // this.location=hoods.name;
+  hoodClicked =(hood: any) =>{
+      console.log(hood.id)
+      this.hoodsService.getOneHood(hood.id).subscribe(
+        hoods =>{
+          console.log(hoods)
+        },
+        error =>{
+          console.log(error)
 
-    })
+        }
+      );    
   }
+
 
 }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CreatehoodService} from '../../../services/hoods/createhood.service'
+import {CreatehoodService} from '../../../services/hoods/createhood.service';
+import {Neighbourhood} from '../../../src/app/interface/models/neighbourhood';
 
 @Component({
   selector: 'app-addhoods',
@@ -26,6 +27,7 @@ export class AddhoodsComponent implements OnInit {
       error => console.log('error', error)
     ) ;
   }
+
 
 }
 

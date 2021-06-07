@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GethoodsService {
-  userData: any;
+  userData: any; 
   api_link:string='http://localhost:8000/';
   
   constructor(private http:HttpClient) { }
