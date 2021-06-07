@@ -16,14 +16,19 @@
                 <p>Description is required</p>
             </div>
         </div>
+        <br>
         <div class="form-group">
-            <label for="datesubmitted">Date Submitted</label>
+            <label for="datesubmitted">Date Submitted</label><br>
             <input type='date' id="datesubmitted" [(ngModel)]="newPost.date" name="date" #date='ngModel' max="2021-06-10" required>  
             <div [hidden]="date.valid || date.pristine" class="alert alert-danger">
                 <p>Date is required</p>
             </div>
         </div>
-        <button type="submit" class="btn btn-danger" (click)=createPost()>Post</button>
+        <br>
+        <div>
+            <button type="submit" class="btn btn-danger btn-block" (click)=createPost()>Post</button>
+        </div>
+        
     </form>
   </div>
 

@@ -17,3 +17,7 @@ export class LoginService {
     return this.http.post(this.api_link + `authlogin/`, userData)
   }
 }
+
+
+
+

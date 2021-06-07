@@ -1,9 +1,11 @@
-<p>neighbourhoods works!</p>
+<div class="container-fluid hoods">
+    <div id="choose-hood">
+        <h6 *ngFor="let hood of hoods" id="each-hood">
+            <a (click)="hoodClicked(hood)" routerLink="/home">{{hood.name}}</a>
+            <p>{{hood.location}}</p>
 
-<ul>
-    <li *ngFor='let hood of hoods'>
-        <a (click) ="hoodClicked(hood)" routerLink="neighbourhoods">{{hood.name}}</a>
-        <p>{{hood.location}}</p>
+        </h6>
 
-    </li>
-</ul>
+    </div>
+
+</div>

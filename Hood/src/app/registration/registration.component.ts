@@ -24,11 +24,12 @@ export class RegistrationComponent implements OnInit {
   registerUser(){
     this.createUserService.registerUser(this.input).subscribe(
       response =>{
-        alert('User' + this.input.username + 'has been created') 
+        alert('User' +  " " + this.input.username + 'has been created') 
       },
       error => console.log('error', error)
     ) ;
   }
 
-
 }
+
+
