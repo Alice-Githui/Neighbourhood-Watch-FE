@@ -8,6 +8,8 @@ import {GethoodsService} from '../../../services/gethoods.service'
 })
 export class NeighbourhoodsComponent implements OnInit {
   hoods: any;
+  name: any;
+  location: any;
 
   constructor(private hoodsService:GethoodsService) { }
 
@@ -18,16 +20,19 @@ export class NeighbourhoodsComponent implements OnInit {
   AllHoods(){
     this.hoodsService.getAllHoods().subscribe(hoods =>{
       this.hoods=hoods;
+      
       console.log(this.hoods);
     })
   }  
 
   hoodClicked=(hood: { id: any; }) =>{
-    console.log(hood.id)
-    this.hoodsService.getOneHood(hood.id).subscribe(hoods =>{
-      console.log(hoods)
+    this.hoodsService.getOneHood(hood.id).subscribe(hood =>{
       // this.hoods=hoods;
+      // this.name= hoods.location;
+      // this.location=hoods.name;
+
     })
   }
 
 }
+

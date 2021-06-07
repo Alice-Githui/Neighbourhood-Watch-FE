@@ -6,6 +6,7 @@ import {RegistrationComponent} from './registration/registration.component';
 import {LoginComponent} from './login/login.component';
 import {PostsComponent} from './posts/posts.component'
 import { ShowpostsComponent } from './showposts/showposts.component';
+import { AddhoodsComponent } from './addhoods/addhoods.component';
 
 const routes: Routes = [
   {path: 'neighbourhoods', component:NeighbourhoodsComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'login', component:LoginComponent},
   {path: 'makepost', component:PostsComponent},
   {path: 'home', component:ShowpostsComponent},
+  {path: 'newhood', component:AddhoodsComponent}
 ];
 
 @NgModule({

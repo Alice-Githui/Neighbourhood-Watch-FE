@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { PostsComponent } from './posts/posts.component';
 import { ShowpostsComponent } from './showposts/showposts.component';
 import { PostdetailcomponentComponent } from './postdetailcomponent/postdetailcomponent.component';
+import { AddhoodsComponent } from './addhoods/addhoods.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PostdetailcomponentComponent } from './postdetailcomponent/postdetailco
     LoginComponent,
     PostsComponent,
     ShowpostsComponent,
-    PostdetailcomponentComponent  ],
+    PostdetailcomponentComponent,
+    AddhoodsComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
