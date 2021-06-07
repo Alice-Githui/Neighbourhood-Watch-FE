@@ -9,6 +9,7 @@ import {Neighbourhood} from '../../../src/app/interface/models/neighbourhood';
 })
 export class AddhoodsComponent implements OnInit {
   newhood: any;
+  neighborhood: Neighbourhood[] = [];
 
   constructor(private createhoods: CreatehoodService) { }
 
@@ -26,6 +27,13 @@ export class AddhoodsComponent implements OnInit {
       },
       error => console.log('error', error)
     ) ;
+  }
+
+  updateneighborHood(id: any, neighborhood: Neighbourhood) {
+    this.createhoods.update(id, neighborhood).subscribe((result) => {
+      console.warn('result', result);
+    });
+    console.warn(id);
   }
 
 

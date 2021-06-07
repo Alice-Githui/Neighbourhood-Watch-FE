@@ -2,14 +2,11 @@
     <div id="choose-hood">
         <h6 *ngFor="let hood of hoods" id="each-hood">
             <a (click)="hoodClicked(hood)" routerLink="/home">{{hood.name}}</a>
-            <p>{{hood.location}}</p>
+           
+            <p>{{hood.location}}</p><span><small>Hood id: {{hood.id}}</small></span>
 
         </h6>
-        <!-- <div>
-            Name: <input type="text" [(ngModel)]="name" name="name" #name="ngModel">
-            Location: <input type="text" [(ngModel)]="location" name="location">
-
-        </div> -->
+        <p><a routerLink="/newhood" style="color: black; text-transform: uppercase; color: red;">Add a New Neighbourhood</a></p>
 
     </div>
 

@@ -11,13 +11,16 @@ export class CreatehoodService {
 
   userData: any;
   api_link:string='http://localhost:8000/';
-  update_api_link:string='http://localhost:8000/'
+  update_url = 'http://127.0.0.1:8000/api/update/neighbours/';
 
   constructor(private http:HttpClient) { }
 
   createHood(userData: any): Observable<any>{
     return this.http.post(this.api_link + `api/neighbours/`, userData)
 
+  }
+  update(id: any, neighborhood: Neighbourhood) {
+    return this.http.put(`${this.update_url}${id}/`, neighborhood);
   }
 
 }
