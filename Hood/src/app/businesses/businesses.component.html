@@ -1,9 +1,25 @@
+<app-navbar></app-navbar>
+<div class="container-fluid" id="business">
+    <h4>All Businesses</h4>
+    <div class="row">
+        
+        <div class="col-md-3"></div>
+        <div class="col-md-6" id="businessdetails">
+            <ul>
+                <li *ngFor='let business of businesses'>
+                    <p>{{business.name}}</p> 
+                    <span><small>Business id: {{business.id}}</small></span>
+                    <p>{{business.email}}</p>
+                    <!-- <p>{{business.location}}</p> -->
+                    <!-- <p>{{business.user}}</p> -->
+                </li>
+            </ul>
+           
 
-<ul>
-    <li *ngFor='let business of businesses'>
-        <p>{{business.name}}</p>
-        <p>{{business.email}}</p>
-        <!-- <p>{{business.location}}</p> -->
-        <!-- <p>{{business.user}}</p> -->
-    </li>
-</ul>
+        </div>
+        <div>
+            <p style="margin-left: 200px;"><a routerLink="/newbusiness">Add a New Business</a></p>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class GetbusinessesService {
+  userData:any;
   api_link:string='http://localhost:8000/';
 
   constructor(private http:HttpClient) { }
@@ -17,6 +18,10 @@ export class GetbusinessesService {
 
   getOneBusiness(id: any): Observable<any>{
     return this.http.get(this.api_link + `api/business/` + id + '/')
+  }
+
+  createBusiness(userData: any): Observable<any>{
+    return this.http.post(this.api_link + `api/business/`, userData)
   }
 }
 

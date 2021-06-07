@@ -15,6 +15,7 @@ import { PostsComponent } from './posts/posts.component';
 import { ShowpostsComponent } from './showposts/showposts.component';
 import { PostdetailcomponentComponent } from './postdetailcomponent/postdetailcomponent.component';
 import { AddhoodsComponent } from './addhoods/addhoods.component';
+import { AddbusinessComponent } from './addbusiness/addbusiness.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AddhoodsComponent } from './addhoods/addhoods.component';
     PostsComponent,
     ShowpostsComponent,
     PostdetailcomponentComponent,
-    AddhoodsComponent  ],
+    AddhoodsComponent,
+    AddbusinessComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

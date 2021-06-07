@@ -7,6 +7,7 @@ import {LoginComponent} from './login/login.component';
 import {PostsComponent} from './posts/posts.component'
 import { ShowpostsComponent } from './showposts/showposts.component';
 import { AddhoodsComponent } from './addhoods/addhoods.component';
+import {AddbusinessComponent} from '../app/addbusiness/addbusiness.component';
 
 const routes: Routes = [
   {path: 'neighbourhoods', component:NeighbourhoodsComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'makepost', component:PostsComponent},
   {path: 'home', component:ShowpostsComponent},
   {path: 'newhood', component:AddhoodsComponent},
+  {path: 'newbusiness', component:AddbusinessComponent},
 
   {path: '', redirectTo:"/login", pathMatch:"full"}
 ];
