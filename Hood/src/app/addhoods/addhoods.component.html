@@ -37,31 +37,25 @@
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
-
-      <form #updateneighborhood="ngForm" (ngSubmit)="
-          updateneighborHood(
-            updateneighborhood.value.id,
-            updateneighborhood.value
-          )" method="POST" class="form-control p-3">
-        <h5 class="card text-center">
+      <form class="form-control p-3">
+        <h5 class="card text-center mb-3">
           <strong>Update Neighborhood</strong>
         </h5>
         <div class="mb-3">
           <label for="neighborhood_id" class="form-label">Neighborhood Id</label>
-          <input class="form-control" id="post_id" type="number" name="id">
+          <input class="form-control" id="post_id" type="number" name="id" [(ngModel)]="neighborhood.id" /><br />
         </div>
         <div class="mb-3">
           <label for="name" class="form-label">Neighborhood Name</label>
-          <input type="text" class="form-control" id="name" name="name">
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="neighborhood.name" /><br />
         </div>
         <div class="mb-3">
           <label for="location" class="form-label">General Location</label>
-          <input class="form-control" id="profile" type="text" name="location">
+          <input class="form-control" id="profile" type="text" name="location"
+            [(ngModel)]="neighborhood.location" /><br />
         </div>
-
-        <button type="submit" class="btn btn-danger" routerLink="/neighbourhoods">Submit</button>
+        <button type="submit" (click)="updateHood(neighborhood)" class="btn btn-danger" routerLink="/neighbourhoods">Submit</button>
       </form>
-
     </div>
     <div class="col-md-3"></div>
   </div>

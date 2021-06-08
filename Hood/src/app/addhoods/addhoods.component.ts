@@ -9,7 +9,12 @@ import {Neighbourhood} from '../../../src/app/interface/models/neighbourhood';
 })
 export class AddhoodsComponent implements OnInit {
   newhood: any;
-  neighborhood: Neighbourhood[] = [];
+  // neighborhood: Neighbourhood[] = [];
+  neighborhood: Neighbourhood = {
+    id: '',
+    name: '',
+    location: '',
+  };
 
   constructor(private createhoods: CreatehoodService) { }
 
@@ -29,11 +34,12 @@ export class AddhoodsComponent implements OnInit {
     ) ;
   }
 
-  updateneighborHood(id: any, neighborhood: Neighbourhood) {
-    this.createhoods.update(id, neighborhood).subscribe((result) => {
+  updateHood(neighborhood: Neighbourhood) {
+    this.createhoods.update(this.neighborhood.id, neighborhood).subscribe((result) => {
+      console.log(neighborhood.name)
       console.warn('result', result);
     });
-    console.warn(id);
+    console.warn(neighborhood.id);
   }
 
 
