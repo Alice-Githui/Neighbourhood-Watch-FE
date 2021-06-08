@@ -34,4 +34,11 @@ export class AddbusinessComponent implements OnInit {
 
   }
 
+  updateBusiness(id: any, business: Business) {
+    this.businessService.update(id, business).subscribe((result) => {
+      console.warn('result', result);
+    });
+    console.warn(id);
+  }
+
 }

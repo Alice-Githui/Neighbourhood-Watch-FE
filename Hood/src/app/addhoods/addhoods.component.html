@@ -24,7 +24,8 @@
         </div>
         <br>
         <div>
-          <button type="submit" class="btn btn-danger btn-block" (click)=createHood() routerLink="/neighbourhoods">Create Neighbourhood</button>
+          <button type="submit" class="btn btn-danger btn-block" (click)=createHood()
+            routerLink="/neighbourhoods">Create Neighbourhood</button>
         </div>
 
       </form>
@@ -41,8 +42,7 @@
           updateneighborHood(
             updateneighborhood.value.id,
             updateneighborhood.value
-          )"
-        method="POST" class="form-control p-3">
+          )" method="POST" class="form-control p-3">
         <h5 class="card text-center">
           <strong>Update Neighborhood</strong>
         </h5>

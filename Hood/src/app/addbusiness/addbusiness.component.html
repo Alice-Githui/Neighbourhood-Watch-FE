@@ -5,55 +5,53 @@
         <div class="form-group col-md-6" id="createhood">
             <h2 class="text-center">Add a new Business</h2>
             <hr>
-            <form #businessPost="ngForm" method="POST"
-                class="form-control p-3">
+            <form #businessPost="ngForm" method="POST" class="form-control p-3">
                 <h5 class="card text-center mb-3"><strong>Add a Business</strong></h5>
                 <div class="mb-3">
                     <label for="name" class="form-label">Business Name</label>
-                    <input type="text" class="form-control" id="name" name="name" ngModel placeholder="Name" [(ngModel)]="newBusiness.name">
+                    <input type="text" class="form-control" id="name" name="name" ngModel placeholder="Name"
+                        [(ngModel)]="newBusiness.name">
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input class="form-control" id="email" type="email" name="business_email" ngModel
                         placeholder="Email" [(ngModel)]="newBusiness.email">
                 </div>
-                <button type="submit" class="btn btn-danger" (click)=createBusiness() routerLink="/businesses">Submit</button>
+                <button type="submit" class="btn btn-danger" (click)=createBusiness()
+                    routerLink="/businesses">Submit</button>
             </form>
         </div>
         <div class="col-md-3"></div>
     </div>
-    <!-- <br>
-  <br>
-  <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form #updatebusiness="ngForm" (ngSubmit)="updateBusiness(updatebusiness.value.id, updatebusiness.value)"
+                method="POST" class="form-control p-3">
+                <h5 class="card text-center mb-3"><strong>Update Business</strong></h5>
+                <div class="mb-3">
+                    <label for="business_id" class="form-label">Business Id</label>
+                    <input class="form-control" id="id" type="number" name="id" ngModel
+                        placeholder="Business Id" /><br />
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Business Name</label>
+                    <input type="text" class="form-control" id="name" name="name" ngModel placeholder="Name" /><br />
+                </div>
+                <div class="mb-3">
+                    <label for="profile" class="form-label">Email</label>
+                    <input class="form-control" id="profile" type="email" name="business_email" ngModel
+                        placeholder="Email" /><br />
+                </div>
 
-      <form #updateneighborhood="ngForm" (ngSubmit)="
-          updateneighborHood(
-            updateneighborhood.value.id,
-            updateneighborhood.value
-          )"
-        method="POST" class="form-control p-3">
-        <h5 class="card text-center">
-          <strong>Update Neighborhood</strong>
-        </h5>
-        <div class="mb-3">
-          <label for="neighborhood_id" class="form-label">Neighborhood Id</label>
-          <input class="form-control" id="post_id" type="number" name="id">
-        </div>
-        <div class="mb-3">
-          <label for="name" class="form-label">Neighborhood Name</label>
-          <input type="text" class="form-control" id="name" name="name">
-        </div>
-        <div class="mb-3">
-          <label for="location" class="form-label">General Location</label>
-          <input class="form-control" id="profile" type="text" name="location">
-        </div>
+                <button type="submit" class="btn btn-danger" routerLink='/businesses'>Submit</button>
+            </form>
 
-        <button type="submit" class="btn btn-danger" routerLink="/neighbourhoods">Submit</button>
-      </form>
 
+
+        </div>
+        <div class="col-md-3"></div>
     </div>
-    <div class="col-md-3"></div>
-  </div> -->
 </div>
