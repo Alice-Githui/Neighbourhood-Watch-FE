@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
 
+## Known Bugs
+To improve on the registration and login process to check user details
+
+## Future Developments
+To implement the delete functionality and implement the delete functionality for models
+To improve on the User Interface
+To filter all posts by the location so posts appear as per location
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
