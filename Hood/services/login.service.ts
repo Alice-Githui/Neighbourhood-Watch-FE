@@ -10,7 +10,7 @@ export class LoginService {
   userData: any;
 
 
-  api_link:string='http://localhost:8000/';
+  api_link:string='https://neighbourapp-drf.herokuapp.com/';
   constructor(private http: HttpClient) { }
 
   loginUser(userData: any):Observable<any>{

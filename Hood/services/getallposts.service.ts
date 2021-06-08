@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class GetallpostsService {
-  api_link:string='http://localhost:8000/';
+  api_link:string='https://neighbourapp-drf.herokuapp.com/';
 
   constructor(private http:HttpClient) { }
 

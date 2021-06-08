@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 export class PostserviceService {
   userData: any;
 
-  api_link:string='http://localhost:8000/';
+  api_link:string='https://neighbourapp-drf.herokuapp.com/';
 
   constructor(private http: HttpClient) { }
 

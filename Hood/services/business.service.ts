@@ -3,12 +3,12 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Business} from 'src/app/interface/models/business.model';
 
-const baseUrl='http://localhost:8000';
-const allBusinessUrl='http://localhost:8000/api/business/';
-const addurl = 'http://localhost:8000/api/business/post/';
-const updateurl = 'http://localhost:8000/api/update/business/';
-const geturl = 'http://localhost:8000/api/business/get/';
-const deleteurl = 'http://localhost:8000/api/delete/business/';
+const baseUrl='https://neighbourapp-drf.herokuapp.com/';
+const allBusinessUrl='https://neighbourapp-drf.herokuapp.com/api/business/';
+const addurl = 'https://neighbourapp-drf.herokuapp.com/api/business/post/';
+const updateurl = 'https://neighbourapp-drf.herokuapp.com/api/update/business/';
+const geturl = 'https://neighbourapp-drf.herokuapp.com/api/business/get/';
+const deleteurl = 'https://neighbourapp-drf.herokuapp.com/api/delete/business/';
 
 @Injectable({
   providedIn: 'root'

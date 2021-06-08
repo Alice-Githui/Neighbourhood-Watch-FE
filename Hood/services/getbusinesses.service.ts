@@ -9,8 +9,8 @@ import {Business} from './../src/app/interface/models/business.model'
 
 export class GetbusinessesService {
   userData:any;
-  api_link:string='http://localhost:8000/';
-  update_url = 'http://127.0.0.1:8000/api/update/business/';
+  api_link:string='https://neighbourapp-drf.herokuapp.com/';
+  update_url = 'https://neighbourapp-drf.herokuapp.com/api/update/business/';
 
   constructor(private http:HttpClient) { }
 

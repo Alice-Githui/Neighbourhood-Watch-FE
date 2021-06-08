@@ -10,8 +10,8 @@ import {Neighbourhood} from '../../src/app/interface/models/neighbourhood';
 export class CreatehoodService {
 
   userData: any;
-  api_link:string='http://localhost:8000/';
-  update_url = 'http://127.0.0.1:8000/api/update/neighbours/';
+  api_link:string='https://neighbourapp-drf.herokuapp.com/';
+  update_url = 'https://neighbourapp-drf.herokuapp.com/api/update/neighbours/';
 
   constructor(private http:HttpClient) { }
 
