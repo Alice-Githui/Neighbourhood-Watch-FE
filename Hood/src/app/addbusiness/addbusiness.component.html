@@ -28,7 +28,7 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <form #updatebusiness="ngForm" (ngSubmit)="updateBusiness(updatebusiness.value.id, updatebusiness.value)"
+            <!-- <form #updatebusiness="ngForm" (ngSubmit)="updateBusiness(updatebusiness.value.id, updatebusiness.value)"
                 method="POST" class="form-control p-3">
                 <h5 class="card text-center mb-3"><strong>Update Business</strong></h5>
                 <div class="mb-3">
@@ -47,7 +47,30 @@
                 </div>
 
                 <button type="submit" class="btn btn-danger" routerLink='/businesses'>Submit</button>
-            </form>
+            </form> -->
+            <form class="form-control p-3">
+                <h5 class="card text-center mb-3">
+                  <strong>Update Business</strong>
+                </h5>
+                <div class="mb-3">
+                  <label for="business_id" class="form-label">Business Id</label>
+                  <input class="form-control" id="post_id" type="number" name="id" [(ngModel)]="business.id" />
+                </div>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Business Name</label>
+                  <input type="text" class="form-control" id="name" name="name" [(ngModel)]="business.name" />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Business Email</label>
+                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="business.email" />
+                  </div>
+                <div class="mb-3">
+                  <label for="description" class="form-label">Business Description</label>
+                  <input class="form-control" id="description" type="text" name="description"
+                    [(ngModel)]="business.description" />
+                </div>
+                <button type="submit" (click)="updateBusiness(business)" class="btn btn-danger" routerLink="/businesses">Submit</button>
+              </form>
 
 
 

@@ -9,8 +9,14 @@ import {Business} from '../interface/models/business.model'
   styleUrls: ['./addbusiness.component.css']
 })
 export class AddbusinessComponent implements OnInit {
-  business: Business[] = [];
+  // business: Business[] = [];
   newBusiness: any;
+  business: Business = {
+    id: '',
+    name: '',
+    email: '',
+    description:''
+  };
  
   constructor(private http: HttpClient, private businessService:GetbusinessesService) { }
 
@@ -34,11 +40,11 @@ export class AddbusinessComponent implements OnInit {
 
   }
 
-  updateBusiness(id: any, business: Business) {
-    this.businessService.update(id, business).subscribe((result) => {
+  updateBusiness(business: Business) {
+    this.businessService.update(this.business.id, business).subscribe((result) => {
       console.warn('result', result);
     });
-    console.warn(id);
+    console.warn(business.id);
   }
 
 }

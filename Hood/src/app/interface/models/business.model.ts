@@ -3,8 +3,5 @@ export interface Business {
     name?: string;
     description?: string;
     email?: string;
-    user?:string;
-    neighborhood?:string;
-    published?: boolean;
 
 }
